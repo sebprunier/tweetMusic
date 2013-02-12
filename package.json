@@ -7,6 +7,10 @@
 		"express": "3.x",
 		"socket.io": "0.9.x",
 		"ntwitter": "0.5.x"
+		"bower": "0.6.x"
+	},
+	"scripts": {
+	    "postinstall": "./node_modules/bower/bin/bower install"
 	},
 	"engines": {
 		"node": "0.8.x",
