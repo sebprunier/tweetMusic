@@ -5,7 +5,7 @@ var express = require('express'),
 	twitter = require('ntwitter'),
 	terms = require('./modules/terms'),
 	credentials = require('./modules/credentials'),
-	port = 8080;
+	port = process.env.PORT || 5000;
 
 // twitter api credentials
 var twit = new twitter({
