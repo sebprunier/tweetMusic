@@ -4,8 +4,7 @@ var express = require('express'),
 	io = require('socket.io').listen(server),
 	twitter = require('ntwitter'),
 	terms = require('./modules/terms'),
-	credentials = require('./modules/credentials'),
-	port = process.env.PORT || 5000;
+	credentials = require('./modules/credentials');
 
 // twitter api credentials
 var twit = new twitter({
@@ -16,6 +15,7 @@ var twit = new twitter({
 });
 
 // start the server
+var port = process.env.PORT || 5000;
 server.listen(port);
 
 // static files (js/css/html) server from here
