@@ -1,0 +1,16 @@
+{
+   "formatter": {
+    "js": {
+      "indent_size": 1,
+      "indent_char": "\t"
+    }
+  },
+  "jshint": {
+       "options": {
+           "browser": true,
+           "newcap": false
+       },
+       "global": [ "static", "define", "require", "console", "window", "_", "__dirname", "process", "module" ]
+   }
+   
+}

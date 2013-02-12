@@ -1,0 +1,14 @@
+{
+  "name": "tweetMusic",
+  "version": "0.0.1",
+  "dependencies": {
+    "raf": "https://gist.github.com/4534217.git",
+    "Box2d.min": "http://box2dweb.googlecode.com/svn/trunk/Box2d.min.js",
+    "requirejs": "~2.1.2",
+    "jquery": "~1.8.3",
+    "socket.io": "~0.9.11",
+    "bootstrap": "~2.2.2",
+    "stats": "https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js",
+    "webpd": "https://raw.github.com/sebpiq/WebPd/master/dist/webpd-0.2.2.min.js"
+  }
+}
