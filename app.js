@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
  * @param tweet {object} - the object representation of the tweet
  * @return {string} the associated sound name
  */
-function process(tweet) {
+function processTweet(tweet) {
 	if (!tweet) return;
 	for(var k in terms) {
 		if(tweet.indexOf(k) !== -1) return {sound: terms[k]};
@@ -52,7 +52,7 @@ io.sockets.on('connection', function (socket) {
 			// when a tweet match a tracked term
 	        stream.on('data', function(tweet) {
 				// get the sound
-				var sound = process(tweet.text);
+				var sound = processTweet(tweet.text);
 				// and if the sound is found, emit a websocket message to the client
 				if (sound !== undefined) socket.emit('tweet', sound);
 	        });

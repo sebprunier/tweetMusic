@@ -4,7 +4,7 @@ require.config({
 	// vendor lib paths
 	paths: {
 		jquery: '../vendor/jquery/jquery',
-		io: '../vendor/socket.io/dist/socket.io',
+		io: '../vendor/socket.io-client/dist/socket.io',
 		webpd: '../vendor/webpd/index'
 	}
 });
