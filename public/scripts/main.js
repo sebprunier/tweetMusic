@@ -28,8 +28,22 @@ function($, io) {
 		var socket = io.connect(window.location.href);
 		// when the 'tweet' message is recieved
 		socket.on('tweet', function (data) {
-			// send the sound name to the pd patch
-			patch.send(data.sound,1);
+			if (data.sound) {
+				// send the sound name to the pd patch
+				patch.send(data.sound,1);
+				// add in the page the text corresponding to the sound
+				// TODO manage an image instead of the text !
+				// kick -> grosse caisse batterie
+				// tom -> betterie normale
+				// crash -> symballes
+				// clap -> son batterie type bois
+				var soundDiv = $('#' + data.sound);
+				if (soundDiv.length <= 0) {
+					$('#content').append('<div style=\'float:left; width:144px; height: 144px\' id=\''+ data.sound +'\'></div>');
+					$('#' + data.sound).append('<img src=\'img/' + data.sound + '.png\'/>');
+				}
+				$('#' + data.sound + ' img').toggle();
+			}
 		});
 	});
 });
