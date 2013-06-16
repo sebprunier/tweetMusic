@@ -1,9 +1,9 @@
 // tracked terms and the mapped sound
 var terms = {};
-terms.fun = 'crash';
-terms.cool = 'clap';
-terms.nice = 'tom';
-terms.good = 'kick';
+terms['#fun'] = 'crash';
+terms['#cool'] = 'clap';
+terms['#nice'] = 'tom';
+terms['#good'] = 'kick';
 
 // get the keys
 terms.keys = function() {
